@@ -1,5 +1,5 @@
-import { PopularTagType } from "src/app/shared/types/popularTag.type";
+import {PopularTagType} from 'src/app/shared/types/popularTag.type'
 
-export interface GetPopularTagsInterface {
+export interface GetPopularTagsResponseInterface {
   tags: PopularTagType[]
 }

@@ -1,10 +1,9 @@
-import { Component, Input, OnInit } from "@angular/core";
-import { UtilsService } from "src/app/shared/services/utils.service";
+import {Component, Input, OnInit} from '@angular/core'
+import {UtilsService} from 'src/app/shared/services/utils.service'
 
 @Component({
   selector: 'mc-pagination',
-  templateUrl: './pagination.component.html',
-  styleUrls: ['./pagination.component.scss']
+  templateUrl: './pagination.component.html'
 })
 export class PaginationComponent implements OnInit {
   @Input('total') totalProps: number

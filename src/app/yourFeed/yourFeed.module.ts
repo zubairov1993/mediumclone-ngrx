@@ -1,11 +1,12 @@
-import { CommonModule } from "@angular/common";
-import { NgModule } from "@angular/core";
-import { RouterModule } from "@angular/router";
-import { BannerModule } from "../shared/modules/banner/banner.module";
-import { FeedModule } from "../shared/modules/feed/feed.module";
-import { FeedTogglerModule } from "../shared/modules/feedToggler/feedToggler.module";
-import { PopularTagsModule } from "../shared/modules/popularTags/popularTags.module";
-import { YourFeedComponent } from "./components/yourFeed/yourFeed.component";
+import {NgModule} from '@angular/core'
+import {CommonModule} from '@angular/common'
+import {RouterModule} from '@angular/router'
+
+import {YourFeedComponent} from 'src/app/yourFeed/components/yourFeed/yourFeed.component'
+import {FeedModule} from 'src/app/shared/modules/feed/feed.module'
+import {BannerModule} from 'src/app/shared/modules/banner/banner.module'
+import {PopularTagsModule} from '../shared/modules/popularTags/popularTags.module'
+import {FeedTogglerModule} from 'src/app/shared/modules/feedToggler/feedToggler.module'
 
 const routes = [
   {
@@ -17,11 +18,11 @@ const routes = [
 @NgModule({
   imports: [
     CommonModule,
+    RouterModule.forChild(routes),
     FeedModule,
     BannerModule,
     PopularTagsModule,
-    FeedTogglerModule,
-    RouterModule.forChild(routes)
+    FeedTogglerModule
   ],
   declarations: [YourFeedComponent]
 })

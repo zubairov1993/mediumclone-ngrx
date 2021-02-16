@@ -1,18 +1,18 @@
-import { Component } from "@angular/core";
-import { Input, OnInit } from "@angular/core";
-import { select, Store } from "@ngrx/store";
-import { Observable } from "rxjs";
-import { isLoggedInSelector } from "src/app/auth/store/selectors";
+import {Component, Input, OnInit} from '@angular/core'
+import { Observable } from 'rxjs'
+import { Store, select } from '@ngrx/store'
+import { isLoggedInSelector } from 'src/app/auth/store/selectors'
 
 @Component({
   selector: 'mc-feed-toggler',
-  templateUrl: './feddToggler.comonent.html'
+  templateUrl: './feedToggler.component.html'
 })
 export class FeedTogglerComponent implements OnInit {
-  @Input('tagName') tagNameProps: string | null
+  @Input('tagName') tagNameProps: string
 
   isLoggedIn$: Observable<boolean>
-  constructor(private store: Store) { }
+
+  constructor(private store: Store) {}
 
   ngOnInit(): void {
     this.initializeValues()
