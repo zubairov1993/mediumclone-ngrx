@@ -1,4 +1,4 @@
-import {Component} from '@angular/core'
+import {Component, OnInit} from '@angular/core'
 
 @Component({
   selector: 'mc-your-feed',
@@ -6,5 +6,8 @@ import {Component} from '@angular/core'
   styleUrls: ['./yourFeed.component.scss']
 })
 export class YourFeedComponent {
-  apiUrl = '/articles/feed'
+  apiUrl = '/articles'
+
+
+
 }
